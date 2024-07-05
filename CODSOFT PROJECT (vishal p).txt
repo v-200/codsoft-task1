@@ -1,0 +1,526 @@
+Task -1 
+   
+  creating a portfolio using css and html is a popular beginner web development project
+
+    
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself here.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Description of the project.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
+ 
+
+Task-2
+
+ a landing page is a ideal web development project for beginners it requires basic knowledge of html and css.
+
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Our Landing Page</h1>
+        <p>This is a great place to introduce your product or service.</p>
+        <a href="#about" class="button">Learn More</a>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Information about your company or product.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Details of the services you offer.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>How customers can reach you.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+Task-3
+    
+    To create a basic calculator using css, html, javascript you will need to implement interactive interface buttons for addition ,subraction and division operation
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="chooseOperation('+')">+</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="chooseOperation('-')">-</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="chooseOperation('*')">*</button>
+
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="chooseOperation('/')">/</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    width: 200px;
+    height: 40px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4
+
+
+Level-2
+Task-1
+
+build a job board website were employers can post job openings and job seekers can search and apply 
+for an job use react, node.js, and database like mongodb or postgreSQL 
+
+
+
+mkdir job-board
+cd job-board
+npm init -y
+npm install express mongoose body-parser cors
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+// Create Express app
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+// MongoDB connection
+mongoose.connect('mongodb://localhost:27017/jobBoard', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+// Check for successful connection
+mongoose.connection.once('open', () => {
+    console.log('Connected to MongoDB');
+});
+
+// Define Job Schema
+const jobSchema = new mongoose.Schema({
+    title
+
+
+Task-2
+
+create a platform that enables user to create and take quizzes .users can input the questions, multiple
+-choice answers, and correct answers to build a quiz other users can then take the quiz and receive it immediate
+feedback on their scores
+
+
+
+
+   // app.js (Node.js Express)
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const app = express();
+app.use(bodyParser.json());
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost:27017/quizdb', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Define schema and model
+const quizSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  questions: [
+    {
+      questionText: String,
+      options: [String],
+      correctAnswer: String,
+    },
+  ],
+});
+
+const Quiz = mongoose.model('Quiz', quizSchema);
+
+// Create a quiz
+app.post('/api/quizzes', async (req, res) => {
+  const quiz = new Quiz(req.body);
+  await quiz.save();
+  res.status(201).send(quiz);
+});
+
+// Fetch all quizzes
+app.get('/api/quizzes', async (req, res) => {
+  const quizzes = await Quiz.find();
+  res.send(quizzes);
+});
+
+// Submit quiz answers and get score
+app.post('/api/quizzes/:id/submit', async (req, res) => {
+  const quiz = await Quiz.findById(req.params.id);
+  const answers = req.body.answers;
+  let score = 0;
+
+  quiz.questions.forEach((question, index) => {
+    if (question.correctAnswer === answers[index]) {
+      score++;
+    }
+  });
+
+  res.send({ score });
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+// App.js (React)
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const App = () => {
+  const [quizzes, setQuizzes] = useState([]);
+  const [selectedQuiz, setSelectedQuiz] = useState(null);
+  const [answers, setAnswers] = useState({});
+  const [score, setScore] = useState(null);
+
+  useEffect(() => {
+    const fetchQuizzes = async () => {
+      const res = await axios.get('/api/quizzes');
+      setQuizzes(res.data);
+    };
+
+    fetchQuizzes();
+  }, []);
+
+  const handleSubmit = async () => {
+    const res = await axios.post(`/api/quizzes/${selectedQuiz._id}/submit`, { answers });
+    setScore(res.data.score);
+  };
+
+  return (
+    <div>
+      <h1>Quiz Platform</h1>
+      {score === null ? (
+        <div>
+          {quizzes.map((quiz) => (
+            <div key={quiz._id}>
+              <h2>{quiz.title}</h2>
+              <button onClick={() => setSelectedQuiz(quiz)}>Take Quiz</button>
+            </div>
+          ))}
+          {selectedQuiz && (
+            <div>
+              {selectedQuiz.questions.map((question, index) => (
+                <div key={index}>
+                  <h3>{question.questionText}</h3>
+                  {question.options.map((option, i) => (
+                    <div key={i}>
+                      <input
+                        type="radio"
+                        name={`question-${index}`}
+                        value={option}
+                        onChange={() => setAnswers({ ...answers, [index]: option })}
+                      />
+                      {option}
+                    </div>
+                  ))}
+                </div>
+              ))}
+              <button onClick={handleSubmit}>Submit</button>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div>
+          <h2>Your Score: {score}</h2>
+          <button onClick={() => setScore(null)}>Take Another Quiz</button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default App;
+
+
+
+Level-3 
+Task-1
+
+ 
+    build a e-commerce website were user can browse products add items to a shopping cart  and proceed to checkout implement the features 
+like user authentication,product filtering and payment integration using technologies like react,node.js,mongo.DB
+
+
+
+     npx create-react-app ecommerce-frontend
+cd ecommerce-frontend
+npm install react-router-dom redux react-redux axios
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import ProductList from './pages/ProductList';
+import ProductDetails from './pages/ProductDetails';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import Login from './pages/Login';
+import Register from './pages/Register';
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/products" component={ProductList} />
+        <Route path="/product/:id" component={ProductDetails} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/checkout" component={Checkout} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to the E-commerce Store</h1>
+    </div>
+  );
+};
+
+export default Home;
+import { createStore, combineReducers } from 'redux';
+import { productReducer, cartReducer, userReducer } from './reducers';
+
+const rootReducer = combineReducers({
+  product: productReducer,
+  cart: cartReducer,
+  user: userReducer,
+});
+
+const store = createStore(rootReducer);
+
+export default store;
+mkdir ecommerce-backend
+cd ecommerce-backend
+npm init -y
+npm install express mongoose bcryptjs jsonwebtoken cors
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const userRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes');
+const cartRoutes = require('./routes/cartRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.use('/api/users', userRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/orders', orderRoutes);
+
+mongoose.connect('mongodb://localhost:27017/ecommerce', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const mongoose = require('mongoose');
+const
+
+
+Task-2
+
+
+develop a project management tool that allows users to create a projects, and assign tasks, 
+deadlines, and track progress use react,node.js,a database like mongo.DB and posgreSQL
+
+
+
+    // server.js
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const projectRoutes = require('./routes/projectRoutes');
+
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost/projectManagement', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('Error connecting to MongoDB', err));
+
+// Routes
+app.use('/api/projects', projectRoutes);
+
+// Start server
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
+// routes/projectRoutes.js
+const express = require('express');
+const router = express.Router();
+const Project = require('../models/Project');
+
+// Create a project
+router.post('/', async (req, res) => {
+  try {
+    const { name, description, deadlines } = req.body;
+    const project = new Project({ name, description, deadlines });
+    await project.save();
+    res.status(201).json(project);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+module.exports = router;
+// models/Project.js
+const mongoose = require('mongoose');
+
+const projectSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  deadlines: {
+    type: Date,
+    required: true
+  }
+});
+
+module.exports = mongoose.model('Project', projectSchema);
